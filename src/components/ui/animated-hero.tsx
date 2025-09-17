@@ -26,7 +26,7 @@ const transitionVariants = {
 
 function Hero() {
   return (
-    <div className="w-full px-10 lg:-0 ">
+    <div className="w-full px-6 lg:px-0 ">
       {/* <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-transparent z-10"></div> */}
 
       {/* <img
@@ -49,13 +49,13 @@ function Hero() {
             ...transitionVariants,
           }}
         >
-          <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
+          <div className="flex  gap-8 mt-10 lg:mt-0 py-20 lg:py-40 items-center justify-center flex-col">
             <div>
               <div
                 className="gap-4 py-2 px-4  rounded-full 
      bg-white/10 border border-white/20 
      backdrop-blur-md  
-     text-white font-semibold text-sm flex items-center"
+     text-white font-semibold text-xs lg:textsm flex items-center"
               >
                 <span>
                   <ShinyText
@@ -72,11 +72,11 @@ function Hero() {
             <div className="flex gap-4 flex-col">
               {/* <span className="text-[#53FBA5]">Luntian Travel and Tour</span> */}
 
-              <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+              <h1 className="text-5xl lg:text-7xl max-w-2xl tracking-tighter text-center font-regular">
                 <span className="text-[#53FBA5]">Luntian Travel and Tour</span>
               </h1>
 
-              <p className="text-lg md:text-xl leading-relaxed tracking-tight text-gray-400 max-w-2xl text-center">
+              <p className="text-md lg:text-xl leading-relaxed tracking-tight text-gray-400 max-w-2xl text-center">
                 Experience the Philippines' hidden gem through sustainable
                 ecotourism. Explore pristine natural parks, vibrant coastal
                 ecosystems, and authentic community-based adventures in

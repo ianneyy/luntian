@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div className="py-6  w-full relative z-99">
-      <div data-state={menuState && "active"} className="flex px-10 lg:px-16 ">
+      <div data-state={menuState && "active"} className="flex px-6 lg:px-16 ">
         <div className="flex lg:hidden justify-between w-full">
           <span className="text-4xl title text-gray-100">Luntian</span>
           <button
@@ -76,7 +76,7 @@ export default function Header() {
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <span
-                    className="text-white  visited:text-white block duration-150 text-lg font-medium"
+                    className="text-white  visited:text-white block duration-150 text-sm lg:text-lg font-medium"
                     onClick={() => setMenuState(false)}
                   >
                     <span>{item.name}</span>
