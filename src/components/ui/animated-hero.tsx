@@ -59,7 +59,7 @@ function Hero() {
               >
                 <span>
                   <ShinyText
-                    text="Alaminos, Pangasinan"
+                    text="Pangasinan, Philippines"
                     disabled={false}
                     speed={3}
                     className="custom-class"
