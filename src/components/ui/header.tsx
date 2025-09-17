@@ -5,8 +5,6 @@ import React from "react";
 const menuItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "/" },
 ];
 
@@ -15,10 +13,7 @@ export default function Header() {
 
   return (
     <div className="py-6  w-full relative z-99">
-      <div
-        data-state={menuState && "active"}
-        className="flex  px-16 "
-      >
+      <div data-state={menuState && "active"} className="flex px-10 lg:px-16 ">
         <div className="flex lg:hidden justify-between w-full">
           <span className="text-4xl title text-gray-100">Luntian</span>
           <button
@@ -44,11 +39,11 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="hidden lg:flex justify-between w-full">
+        <div className="hidden lg:flex justify-between w-full items-center">
           <span className="text-4xl title text-gray-100">Luntian</span>
 
           <div
-            className=" gap-5 p-2 rounded-full 
+            className=" gap-5 py-3 px-2 rounded-full 
                 bg-white/10 border border-white/20 
                 backdrop-blur-md  
                 text-white font-semibold text-sm "
@@ -72,21 +67,20 @@ export default function Header() {
         </div>
 
         <div
-          className={`fixed inset-0 z-50  lg:hidden ${
+          className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm lg:hidden ${
             menuState ? "block" : "hidden"
           }`}
         >
-          <div className="absolute top-20 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 min-w-[200px]">
-            <ul className="space-y-6 text-base">
+          <div className="absolute top-20 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 min-w-[300px] z-100">
+            <ul className="space-y-6 ">
               {menuItems.map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-white hover:text-[#53FBA5] block duration-150 text-lg font-medium"
+                  <span
+                    className="text-white  visited:text-white block duration-150 text-lg font-medium"
                     onClick={() => setMenuState(false)}
                   >
                     <span>{item.name}</span>
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
